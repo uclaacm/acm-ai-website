@@ -1,0 +1,47 @@
+@use "../styles/global_variables.module.scss" as vars;
+
+.container {
+  display: inline-block;
+  position: relative;
+  margin: 2rem, 4rem;
+  width: 100%;
+  min-height: 100;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 4px #f5f0f0;
+}
+
+.text {
+  text-align: left;
+  font-size: 13px;
+  margin: 30px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.body {
+  display: flex;
+  gap: 4rem;
+  overflow-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+.time {
+  color: vars.$committee-color;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  margin-top: 15px;
+}
+
+@media (max-width: 1175px) {
+  .body {
+    display: inline;
+  }
+}

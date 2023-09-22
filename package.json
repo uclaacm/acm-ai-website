@@ -1,0 +1,45 @@
+{
+  "name": "next-ts-starter-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node ./scripts/component-generator.mjs && next build",
+    "start": "node ./scripts/component-generator.mjs && next start",
+    "lint": "next lint && eslint . --ext ts --ext tsx --ext js && npx stylelint \"**/*.{css,scss,sass}\"",
+    "prepare": "husky install",
+    "lint-fix": "next lint && eslint . --ext ts --ext tsx --ext js --fix && npx stylelint --fix \"**/*.{css,scss,sass}\" && prettier --write .",
+    "pre-commit": "yarn lint-fix"
+  },
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "googleapis": "^118.0.0",
+    "moment": "^2.29.4",
+    "moment": "^2.29.4",
+    "next": "12",
+    "next-seo": "^6.0.0",
+    "react": "18.2.0",
+    "react-big-calendar": "^1.6.9",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.7.4"
+  }
+}

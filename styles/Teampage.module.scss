@@ -1,0 +1,80 @@
+@use "../styles/global_variables.module.scss" as vars;
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 6rem;
+  flex: 1;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 1rem;
+  font-size: 3.5rem;
+}
+
+.description {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.subtitle {
+  margin: 1rem;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: 2rem;
+}
+
+.boardgrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  // max-width: 50%;
+}
+
+.gmgrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  // max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  color: inherit;
+  text-decoration: none;
+
+  // grid-area: card;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+
+  .code {
+    background: #111;
+  }
+
+  .logo img {
+    filter: invert(1);
+  }
+}

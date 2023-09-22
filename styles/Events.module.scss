@@ -1,0 +1,46 @@
+@use "../styles/global_variables.module.scss" as vars;
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 6rem;
+  flex: 1;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin: 1rem;
+
+  /* Grey */
+
+  color: #313235;
+}
+
+// .description {
+//   font-weight: 400;
+//   font-size: 18px;
+//   margin: 1rem;
+
+//   /* Grey */
+
+//   color: #313235;
+// }
+
+.subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  color: vars.$committee-color;
+}
+
+.card {
+  min-height: 200px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}

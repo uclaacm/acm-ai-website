@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  width: 285px;
+  height: 80px;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 0 10px 4px #f5f0f0;
+}
+
+.image {
+  flex: 1;
+  margin: 15px;
+  margin-left: 10px;
+  text-align: center;
+  clip-path: circle(50%);
+}
+
+.text {
+  flex: 4;
+  margin-top: 5px;
+}
+
+.topline {
+  display: flex;
+  align-items: center;
+}

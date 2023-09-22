@@ -1,0 +1,126 @@
+@use "../styles/global_variables.module.scss" as vars;
+
+.masthead {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+}
+
+.masthead-text {
+  position: absolute;
+  top: 15%;
+  width: 60%;
+  padding: 5rem 8rem;
+  font-family: Poppins, sans-serif;
+}
+
+.heading {
+  padding: 1rem 0;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 0;
+  font-weight: 1000;
+}
+
+.committee-name {
+  color: vars.$committee-color;
+}
+
+.lead {
+  font-size: 2rem;
+  margin-top: -0.2rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.description {
+  padding: 1.25rem 0;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 100;
+}
+
+.cta-btn {
+  color: vars.$committee-color;
+  background-color: transparent;
+  border: 2px solid vars.$committee-color;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: vars.$committee-color;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.main-section {
+  height: 40rem;
+}
+
+.content {
+  color: #eee;
+  font-size: 7rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1200px) {
+  .masthead-text {
+    width: 70%;
+  }
+
+  .heading {
+    padding: 0.75rem 0;
+  }
+
+  .title {
+    font-size: 3.75rem;
+  }
+
+  .lead {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .masthead-text {
+    width: 100%;
+    padding: 5rem 6rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .masthead-text {
+    padding: 5rem 2.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1.5rem;
+  }
+}
