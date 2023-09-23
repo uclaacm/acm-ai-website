@@ -51,9 +51,18 @@ export default function Events({ events }: Props): JSX.Element {
   //replace committee below
   const committee = vars.committee.toLowerCase();
 
-  const filteredEvents = indexedEvents.filter(
-    (event) => event.committee === committee,
-  );
+  //get today's unix timestamp
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+  const todayUnixTime = Math.floor(now.getTime() / 1000);
+
+  //filter by committee and if event is upcoming
+  const filteredEvents = indexedEvents.filter((event) => {
+    return (
+      event.committee === committee &&
+      parseInt(event.start) / 1000 >= todayUnixTime
+    );
+  });
 
   if (committee === 'board') {
     filteredEvents.shift();

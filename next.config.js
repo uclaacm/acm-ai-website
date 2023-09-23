@@ -13,6 +13,7 @@ const nextConfig = {
       'icpc.uclaacm.com',
       'cdn.discordapp.com',
       'i.ibb.co',
+      'hametar0u.github.io',
     ],
   },
 };
