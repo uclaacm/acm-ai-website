@@ -21,23 +21,6 @@ interface Event {
   banner: string;
 }
 
-// interface EventClass {
-//   className?: string;
-// }
-
-// const getEventClassByEvent = (event: Event): EventClass => {
-//   if (!event) {
-//     return {};
-//   }
-//   let modifierStr = '';
-//   if (event.committee) {
-//     modifierStr = `rbc-override-${event.committee}`;
-//   }
-//   return ({
-//     className: `rbc-override-event ${modifierStr}`,
-//   });
-// };
-
 interface Props {
   events: Event[];
   committee: string;
@@ -64,21 +47,18 @@ export default function Events({ events }: Props): JSX.Element {
     );
   });
 
-  if (committee === 'board') {
-    filteredEvents.shift();
-  }
-
   return (
     <MainLayout>
       <div className={styles.main}>
         <h1 className={styles.title}>Events</h1>
-        {/* <p className={styles.description}>
-          Event descriptions Event descriptionsEvent descriptionsEvent
-          descriptionsEvent descriptionsEvent descriptions Event
-          descriptionsEvent descriptionsEvent descriptions
-        </p> */}
         <div>
           <h2 className={styles.subtitle}>Upcoming Events</h2>
+          {/* if there are no events, display a message */}
+          {filteredEvents.length === 0 && (
+            <div>
+              <h4 className={styles.message}>Stay tuned for more events!</h4>
+            </div>
+          )}
           {filteredEvents.map((event, index) => {
             const start = format(new Date(event.start), 'h:mma');
             const end = format(new Date(event.end), 'h:mma');

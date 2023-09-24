@@ -41,7 +41,10 @@ export default function Home({ committee }: Props): JSX.Element {
               <h2 className={styles.lead}>{committee.subtitle}</h2>
             </div>
             <p className={styles.description}>{committee.description}</p>
-            <a className={styles['cta-btn']} href="https://www.uclaacm.com/internship">
+            <a
+              className={styles['cta-btn']}
+              href="https://www.uclaacm.com/internship"
+            >
               Join Us
             </a>
           </div>
